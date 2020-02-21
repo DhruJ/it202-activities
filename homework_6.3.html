@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Canvas Demo</title></head>
+	<body>
+        <canvas id="canvasDemo" width="1200" height="600" style="border:1px solid #000000;">
+             This will be displayed if your browser doesn't
+             support the canvas element. The closing tag is
+             necessary.
+        </canvas>
+        
+		<script>
+		
+		var c = document.getElementById("canvasDemo")
+		var ctx = c.getContext("2d");
+	    ctx.fillStyle = "#8fe3a5";
+		ctx.fillRect(0, 0, 1200, 600);
+		
+	    // function for letter "i"
+	    function myLetter()
+		{
+			ctx.lineWidth = 10;	
+			ctx.strokeStyle = "#34bdeb";
+			
+			// using rectangle property to make letter "i"
+			ctx.rect(50,50,100,50);
+			ctx.rect(50,120,100,200);
+		}
+		
+	    // function call for letter "i"
+		myLetter();
+			
+	    ctx.stroke(); 
+		
+		ctx.font = "30px Arial";
+	    ctx.fillStyle = "black";
+	    ctx.fillText("660055578", 990, 550);	
+			
+		</script>
+    </body>
+</html>
